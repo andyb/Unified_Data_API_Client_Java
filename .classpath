@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/main"/>
+	<classpathentry kind="src" path="src/test"/>
+	<classpathentry kind="lib" path="lib/google-gson-2.0/gson-2.0-javadoc.jar"/>
+	<classpathentry kind="lib" path="lib/google-gson-2.0/gson-2.0-sources.jar"/>
+	<classpathentry kind="lib" path="lib/google-gson-2.0/gson-2.0.jar"/>
+	<classpathentry kind="lib" path="lib/rabbitmq-java-client-bin-2.4.1/commons-cli-1.1.jar"/>
+	<classpathentry kind="lib" path="lib/rabbitmq-java-client-bin-2.4.1/commons-io-1.2.jar"/>
+	<classpathentry kind="lib" path="lib/rabbitmq-java-client-bin-2.4.1/junit.jar"/>
+	<classpathentry kind="lib" path="lib/rabbitmq-java-client-bin-2.4.1/rabbitmq-client-tests.jar"/>
+	<classpathentry kind="lib" path="lib/rabbitmq-java-client-bin-2.4.1/rabbitmq-client.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
