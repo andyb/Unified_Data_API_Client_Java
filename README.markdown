@@ -17,7 +17,8 @@ Getting Started
 ----------------------
 ```java	
 Credentials credentials = new CredentialsImpl ("jim@bookies","password" );
-Session theSession = SessionFactory.createSession(new URL("http://api.sportingsolutions.com"), credentials);
+URL theURL = new URL("http://api.sportingsolutions.com");
+Session theSession = SessionFactory.createSession(theURL, credentials);
 
 //Get the Unified Data API Service
 Service theService = theSession.getService("UnifiedDataAPI");
