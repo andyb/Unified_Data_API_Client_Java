@@ -7,7 +7,7 @@ Any bug reports, comments, feedback or enhancements requests are gratefully rece
 
 Dependencies
 ----------------------
-You will need [Oracle JDK 1.5](http://www.oracle.com/technetwork/java/javasebusiness/downloads/java-archive-downloads-javase5-419410.html) to compile and use the library
+You will need [Oracle JDK 6](http://www.oracle.com/technetwork/java/javasebusiness/downloads/java-archive-downloads-javase6-419409.html) to compile and use the library
 
 Licence
 ----------------------
