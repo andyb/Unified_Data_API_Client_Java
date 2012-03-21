@@ -29,7 +29,7 @@
 			<fileset dir="lib" includes="**/commons-io-1.2.jar"/>
 		</copy>
 		<copy file="runjava.bat" todir="build/SDK"/>
-		<copy file="readme" todir="build/SDK"/>
+		<copy file="readme.markdown" todir="build/SDK"/>
 	</target>
 	
 	<target name="jar" depends="compile, copyDependencies">
