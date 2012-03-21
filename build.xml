@@ -1,0 +1,55 @@
+<project  name="Unified Data API Client Java" basedir="." default="compile">
+
+    <target name="clean">
+        <delete dir="build"/>
+    </target>
+
+	<path id="project.lib">
+        <fileset dir="lib">
+			<include name="**/gson-2.0.jar" />
+			<include name="**/rabbitmq-client.jar" />
+			<include name="**/commons-cli-1.1.jar" />
+			<include name="**/commons-io-1.2.jar" />
+		</fileset>
+		<pathelement path="build/classes" />
+    </path>
+	
+    <target name="compile" depends="clean">
+        <mkdir dir="build/SDKclasses"/>
+        <javac srcdir="src/main" destdir="build/SDKclasses" includeAntRuntime="false">
+			<classpath refid="project.lib" />
+		</javac>
+    </target>
+	
+	<target name="copyDependencies">
+		<copy todir="build/SDK" flatten="true">
+			<fileset dir="lib" includes="**/gson-2.0.jar"/>
+			<fileset dir="lib" includes="**/rabbitmq-client.jar"/>
+			<fileset dir="lib" includes="**/commons-cli-1.1.jar"/>
+			<fileset dir="lib" includes="**/commons-io-1.2.jar"/>
+		</copy>
+		<copy file="runjava.bat" todir="build/SDK"/>
+		<copy file="readme" todir="build/SDK"/>
+	</target>
+	
+	<target name="jar" depends="compile, copyDependencies">
+        <mkdir dir="build/SDK"/>
+        <jar destfile="build/SDK/ss.udapi.sdk.jar" basedir="build/SDKclasses" />
+		<delete dir="build/SDKclasses"/>
+		<zip destfile="build/ss.udapi.sdk.zip" basedir="build"/-->
+    </target>
+	
+	<path id="classpath">
+        <fileset dir="build/SDK" includes="**/*.jar"/>
+    </path>
+	
+	<!--target name="run" depends="jar">
+        <java fork="true" classname="com.sporting.sdk.demo.LoginExample">
+			<classpath>
+				<path refid="classpath" />
+				<path location="build/SDK/SDK.jar" />
+			</classpath>
+		</java>
+    </target-->
+	
+</project>
