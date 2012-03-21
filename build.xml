@@ -36,7 +36,7 @@
         <mkdir dir="build/SDK"/>
         <jar destfile="build/SDK/ss.udapi.sdk.jar" basedir="build/SDKclasses" />
 		<delete dir="build/SDKclasses"/>
-		<zip destfile="build/ss.udapi.sdk.zip" basedir="build"/-->
+		<zip destfile="build/ss.udapi.sdk.zip" basedir="build"/>
     </target>
 	
 	<path id="classpath">
