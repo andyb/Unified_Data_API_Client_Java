@@ -30,11 +30,19 @@
 		</copy>
 		<copy file="runjava.bat" todir="build/SDK"/>
 		<copy file="readme.markdown" todir="build/SDK"/>
+		<copy file="LICENCE.txt" todir="build/SDK"/>
 	</target>
 	
 	<target name="jar" depends="compile, copyDependencies">
         <mkdir dir="build/SDK"/>
-        <jar destfile="build/SDK/ss.udapi.sdk.jar" basedir="build/SDKclasses" />
+        <jar destfile="build/SDK/ss.udapi.sdk.jar" basedir="build/SDKclasses" >
+			<manifest>
+				<attribute name="Built-By" value="Sporting Solutions"/>
+				<attribute name="Implementation-Vendor" value="Sporting Solutions"/>
+				<attribute name="Implementation-Title" value="Unified Data API Java Client"/>
+				<attribute name="Implementation-Version" value="${VersionNumber}"/>
+			</manifest>
+		</jar>
 		<delete dir="build/SDKclasses"/>
 		<zip destfile="build/ss.udapi.sdk.zip" basedir="build"/>
     </target>
