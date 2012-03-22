@@ -44,20 +44,11 @@
 			</manifest>
 		</jar>
 		<delete dir="build/SDKclasses"/>
-		<zip destfile="build/ss.udapi.sdk.zip" basedir="build"/>
+		<zip destfile="build/SportingSolutions.Udapi.Sdk.Java-${VersionNumber}.zip" basedir="build"/>
     </target>
 	
 	<path id="classpath">
         <fileset dir="build/SDK" includes="**/*.jar"/>
     </path>
-	
-	<!--target name="run" depends="jar">
-        <java fork="true" classname="com.sporting.sdk.demo.LoginExample">
-			<classpath>
-				<path refid="classpath" />
-				<path location="build/SDK/SDK.jar" />
-			</classpath>
-		</java>
-    </target-->
 	
 </project>
