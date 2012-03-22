@@ -35,7 +35,7 @@
 	
 	<target name="jar" depends="compile, copyDependencies">
         <mkdir dir="build/SDK"/>
-        <jar destfile="build/SDK/ss.udapi.sdk.jar" basedir="build/SDKclasses" >
+        <jar destfile="build/SDK/ss.udapi.sdk-${VersionNumber}.jar" basedir="build/SDKclasses" >
 			<manifest>
 				<attribute name="Built-By" value="Sporting Solutions"/>
 				<attribute name="Implementation-Vendor" value="Sporting Solutions"/>
